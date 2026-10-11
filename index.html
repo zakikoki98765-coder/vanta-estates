@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VANTA ESTATES | Exceptional Residences</title>
+    <meta
+      name="description"
+      content="VANTA ESTATES curates exceptional contemporary residences and architectural homes for a refined way of living."
+    />
+    <meta property="og:title" content="VANTA ESTATES" />
+    <meta
+      property="og:description"
+      content="Discover extraordinary villas, coastal estates, and architectural residences curated with intention."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23171918'/%3E%3Cpath d='M18 46V24h8l6 7 6-7h8v22h-6V32l-8 9-8-9v14z' fill='%23F3F0E9'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-shell">
+        <a href="#top" class="brand" aria-label="VANTA ESTATES home">
+          <span class="brand-word">VANTA</span>
+          <span class="brand-word alt">ESTATES</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#residences">Residences</a>
+          <a href="#collections">Collections</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#approach">Our Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a href="#contact" class="header-cta">Private Consultation</a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <nav aria-label="Mobile navigation">
+          <a href="#residences">Residences</a>
+          <a href="#collections">Collections</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#approach">Our Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Featured property banner">
+        <div class="hero-media">
+          <img
+            src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=80"
+            alt="Contemporary luxury villa with a pool and expansive glass walls at sunset"
+          />
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content reveal">
+          <p class="eyebrow">Exceptional homes. Distinctive lives.</p>
+          <h1>Space to Live Beyond Ordinary.</h1>
+          <p class="hero-copy">
+            An exceptional collection of contemporary residences, chosen for their architecture,
+            character, and sense of place.
+          </p>
+          <div class="hero-actions">
+            <a href="#residences" class="button button-primary">Explore Residences</a>
+            <a href="#approach" class="button button-secondary">Discover Vanta</a>
+          </div>
+        </div>
+
+        <a href="#residences" class="scroll-indicator" aria-label="Scroll to residences">
+          <span>Scroll</span>
+        </a>
+      </section>
+
+      <section class="search-shell" id="residences">
+        <div class="container">
+          <div class="search-panel reveal">
+            <div class="section-header search-header">
+              <div>
+                <p class="label">Property search</p>
+                <h2>Curated by place, style, and intent.</h2>
+              </div>
+              <button id="reset-filters" class="text-button" type="button">Reset filters</button>
+            </div>
+
+            <form id="property-search" class="property-search" novalidate>
+              <div class="field">
+                <label for="location-filter">Location</label>
+                <select id="location-filter" name="location">
+                  <option value="all">Any location</option>
+                  <option value="California">California</option>
+                  <option value="Pacific Coast">Pacific Coast</option>
+                  <option value="Mediterranean">Mediterranean</option>
+                  <option value="Desert">Desert</option>
+                  <option value="Hillside">Hillside</option>
+                  <option value="Island">Island</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="type-filter">Property type</label>
+                <select id="type-filter" name="type">
+                  <option value="all">Any type</option>
+                  <option value="Contemporary Villa">Contemporary Villa</option>
+                  <option value="Architectural Residence">Architectural Residence</option>
+                  <option value="Coastal Estate">Coastal Estate</option>
+                  <option value="Modern Penthouse">Modern Penthouse</option>
+                  <option value="Garden Residence">Garden Residence</option>
+                  <option value="Signature Mansion">Signature Mansion</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="min-price">Min price</label>
+                <select id="min-price" name="minPrice">
+                  <option value="0">No minimum</option>
+                  <option value="2000000">$2M</option>
+                  <option value="4000000">$4M</option>
+                  <option value="6000000">$6M</option>
+                  <option value="8000000">$8M</option>
+                  <option value="10000000">$10M</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="max-price">Max price</label>
+                <select id="max-price" name="maxPrice">
+                  <option value="999999999">No maximum</option>
+                  <option value="5000000">$5M</option>
+                  <option value="8000000">$8M</option>
+                  <option value="12000000">$12M</option>
+                  <option value="18000000">$18M</option>
+                  <option value="25000000">$25M</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="bedrooms-filter">Bedrooms</label>
+                <select id="bedrooms-filter" name="bedrooms">
+                  <option value="0">Any</option>
+                  <option value="3">3+</option>
+                  <option value="4">4+</option>
+                  <option value="5">5+</option>
+                  <option value="6">6+</option>
+                </select>
+              </div>
+
+              <div class="search-actions">
+                <button type="submit" class="button button-primary">Apply Filters</button>
+              </div>
+            </form>
+
+            <p id="search-feedback" class="search-feedback" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-properties section reveal">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="label">Featured residences</p>
+              <h2>Homes chosen for architecture, atmosphere, and ease.</h2>
+            </div>
+          </div>
+
+          <div id="property-grid" class="property-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="architecture" class="architecture-section section reveal">
+        <div class="container architecture-layout">
+          <div class="architecture-copy">
+            <p class="label">Architecture</p>
+            <h2>Architecture That Speaks Without Saying a Word.</h2>
+            <p>
+              Each residence is selected for its clarity of form, tactile materials, and the way it
+              invites light to shape everyday living. We pursue homes with quiet confidence, where the
+              landscape, interior palette, and structural detail feel considered from first glance to last.
+            </p>
+            <p>
+              From limestone courtyards to bronze-framed glazing, the best properties possess a strong
+              identity while living beautifully over time.
+            </p>
+          </div>
+
+          <div class="architecture-visuals">
+            <img
+              class="image-large"
+              src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
+              alt="Minimal luxury home exterior with dramatic architecture"
+            />
+            <div class="image-stack">
+              <img
+                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+                alt="Architectural stair detail and warm interior tones"
+              />
+              <div class="quote-card">
+                <span>“A living experience shaped by proportion, light, and silence.”</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="collections" class="collections section reveal">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="label">Curated collections</p>
+              <h2>Distinctive addresses for different ways of living.</h2>
+            </div>
+          </div>
+
+          <div class="collection-grid">
+            <article class="collection-card collection-card--dark" data-collection="Modern Icons">
+              <div class="collection-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+                  alt="Contemporary modern villa in the hills"
+                />
+              </div>
+              <div class="collection-copy">
+                <p class="label">Modern Icons</p>
+                <h3>Pure geometry, warm light, and timeless restraint.</h3>
+                <button class="collection-link" type="button" data-collection="Modern Icons">View collection</button>
+              </div>
+            </article>
+
+            <article class="collection-card collection-card--light" data-collection="Coastal Living">
+              <div class="collection-image">
+                <img
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80"
+                  alt="Luxury coastal interior with light-filled spaces"
+                />
+              </div>
+              <div class="collection-copy">
+                <p class="label">Coastal Living</p>
+                <h3>Sunlight, open horizons, and a graceful indoor-outdoor rhythm.</h3>
+                <button class="collection-link" type="button" data-collection="Coastal Living">View collection</button>
+              </div>
+            </article>
+
+            <article class="collection-card collection-card--stone" data-collection="Private Estates">
+              <div class="collection-image">
+                <img
+                  src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1000&q=80"
+                  alt="Private estate surrounded by trees and landscaping"
+                />
+              </div>
+              <div class="collection-copy">
+                <p class="label">Private Estates</p>
+                <h3>Generous outdoor space and highly considered privacy.</h3>
+                <button class="collection-link" type="button" data-collection="Private Estates">View collection</button>
+              </div>
+            </article>
+
+            <article class="collection-card collection-card--ivory" data-collection="Architectural Originals">
+              <div class="collection-image">
+                <img
+                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80"
+                  alt="Architectural residence with sculptural pool and glass walls"
+                />
+              </div>
+              <div class="collection-copy">
+                <p class="label">Architectural Originals</p>
+                <h3>One-of-a-kind interiors and sculptural material palettes.</h3>
+                <button class="collection-link" type="button" data-collection="Architectural Originals">View collection</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="approach" class="why-vanta section reveal">
+        <div class="container why-grid">
+          <div class="why-copy">
+            <p class="label">Why Vanta</p>
+            <h2>Thoughtful guidance for discerning buyers.</h2>
+          </div>
+
+          <div class="why-content">
+            <article>
+              <h3>Curated portfolio</h3>
+              <p>We focus on homes with character and purpose, never a volume-first approach.</p>
+            </article>
+            <article>
+              <h3>Architecture-led selection</h3>
+              <p>We prioritize form, proportion, materiality, and spatial rhythm over generic luxury cues.</p>
+            </article>
+            <article>
+              <h3>Discreet personal guidance</h3>
+              <p>Every recommendation is tailored to how you want to live, gather, and unwind.</p>
+            </article>
+            <article>
+              <h3>Considered presentation</h3>
+              <p>From careful imagery to detailed property notes, we present homes with clarity and elegance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="editorial-feature section reveal">
+        <div class="container editorial-wrap">
+          <div class="editorial-image">
+            <img
+              src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80"
+              alt="Warm modern interior with a textured wall and sculptural lighting"
+            />
+          </div>
+          <div class="editorial-copy">
+            <p class="label">Editorial feature</p>
+            <h2>Material depth gives a home its emotional signature.</h2>
+            <p>
+              The most memorable residences are never loud. They reveal their personality through stone,
+              timber, softened light, and the quiet choreography between inside and out. We look for homes
+              that feel generous in the way they welcome the day and hold the evening.
+            </p>
+            <p>
+              The best spaces balance visual calm with a feeling of ease—places where every detail is both
+              intentional and effortlessly lived in.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section section reveal">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="label">Property gallery</p>
+              <h2>Interior moments, material studies, and open-air living.</h2>
+            </div>
+          </div>
+
+          <div class="gallery-grid" aria-label="Property gallery">
+            <button class="gallery-item tall" type="button" data-gallery-index="0">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Open-plan luxury living room" />
+            </button>
+            <button class="gallery-item wide" type="button" data-gallery-index="1">
+              <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Exterior view of a contemporary home" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="2">
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80" alt="Luxury kitchen with warm stone finishes" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="3">
+              <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=900&q=80" alt="Private residence with landscaped grounds" />
+            </button>
+            <button class="gallery-item wide" type="button" data-gallery-index="4">
+              <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1200&q=80" alt="Curved architectural interior wall" />
+            </button>
+            <button class="gallery-item" type="button" data-gallery-index="5">
+              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="Poolside contemporary villa details" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="consultation section reveal">
+        <div class="container consultation-layout">
+          <div class="consultation-copy">
+            <p class="label">Client consultation</p>
+            <h2>Your Next Chapter Starts Here.</h2>
+            <p>
+              Tell us what kind of living you crave and we will shape a shortlist that reflects your pace,
+              context, and aspirations.
+            </p>
+            <div class="consultation-links">
+              <a href="#residences">Browse residences</a>
+              <a href="#collections">Explore collections</a>
+            </div>
+          </div>
+
+          <form id="consultation-form" class="consultation-form" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" />
+                <p class="error-message" data-error-for="name"></p>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" />
+                <p class="error-message" data-error-for="email"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="preference">Property preference</label>
+              <select id="preference" name="preference">
+                <option value="">Select a preference</option>
+                <option value="Contemporary Villa">Contemporary Villa</option>
+                <option value="Coastal Estate">Coastal Estate</option>
+                <option value="Architectural Residence">Architectural Residence</option>
+                <option value="Modern Penthouse">Modern Penthouse</option>
+                <option value="Signature Mansion">Signature Mansion</option>
+              </select>
+              <p class="error-message" data-error-for="preference"></p>
+            </div>
+
+            <div class="field">
+              <label for="budget">Budget range</label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option value="$5M – $10M">$5M – $10M</option>
+                <option value="$10M – $20M">$10M – $20M</option>
+                <option value="$20M – $35M">$20M – $35M</option>
+                <option value="$35M+">$35M+</option>
+              </select>
+              <p class="error-message" data-error-for="budget"></p>
+            </div>
+
+            <div class="field">
+              <label for="message">Optional message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about the lifestyle, setting, and features you value."></textarea>
+            </div>
+
+            <button type="submit" class="button button-primary submit-button">Request a Consultation</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#top" class="brand footer-brand">
+            <span class="brand-word">VANTA</span>
+            <span class="brand-word alt">ESTATES</span>
+          </a>
+          <p>Exceptional homes for a more intentional way of living.</p>
+        </div>
+
+        <div>
+          <h3>Properties</h3>
+          <ul>
+            <li><a href="#residences">Residences</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="#contact">Private consultation</a></li>
+            <li><a href="mailto:hello@vantaestates.demo">hello@vantaestates.demo</a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>More</h3>
+          <ul>
+            <li><a href="#approach">Our approach</a></li>
+            <li><a href="#top">Privacy</a></li>
+            <li><a href="#top">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 VANTA ESTATES</span>
+        <span>Portfolio demonstration only</span>
+      </div>
+    </footer>
+
+    <div class="modal hidden" id="property-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal="true"></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close property details">Close</button>
+        <div class="modal-content">
+          <div class="modal-gallery-wrap">
+            <button class="gallery-nav prev" type="button" aria-label="Previous image">Prev</button>
+            <img id="modal-main-image" src="" alt="" />
+            <button class="gallery-nav next" type="button" aria-label="Next image">Next</button>
+          </div>
+
+          <div class="modal-info">
+            <p class="label modal-label">Featured residence</p>
+            <h3 id="modal-title"></h3>
+            <div class="meta-row">
+              <span id="modal-location"></span>
+              <span id="modal-price"></span>
+            </div>
+            <div class="detail-stats">
+              <span id="modal-beds"></span>
+              <span id="modal-baths"></span>
+              <span id="modal-area"></span>
+            </div>
+
+            <p id="modal-description"></p>
+
+            <div class="feature-list">
+              <h4>Architectural highlights</h4>
+              <ul id="modal-features"></ul>
+            </div>
+
+            <div class="feature-list">
+              <h4>Residence amenities</h4>
+              <ul id="modal-amenities"></ul>
+            </div>
+
+            <div class="modal-actions">
+              <a href="#contact" class="button button-primary">Inquire</a>
+              <button class="button button-secondary" type="button" data-close-modal="true">Continue browsing</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lightbox hidden" id="gallery-lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-close-lightbox="true"></div>
+      <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Property gallery preview">
+        <button class="lightbox-close" type="button" aria-label="Close gallery">Close</button>
+        <button class="gallery-nav prev lightbox-prev" type="button" aria-label="Previous gallery image">Prev</button>
+        <img id="lightbox-image" src="" alt="" />
+        <button class="gallery-nav next lightbox-next" type="button" aria-label="Next gallery image">Next</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
